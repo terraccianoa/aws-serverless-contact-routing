@@ -11,12 +11,12 @@ The purpose of this repository is architectural and educational rather than prod
 
 The system:
 
-Receives the request through API Gateway
-Invokes a Lambda function
-Publishes an event to SNS
-Routes the event to the appropriate SQS queue
-Invokes a worker Lambda
-Stores the contact in DynamoDB
+- Receives the request through API Gateway
+- Invokes a Lambda function
+- Publishes an event to SNS
+- Routes the event to the appropriate SQS queue
+- Invokes a worker Lambda
+- Stores the contact in DynamoDB
 
 ---
 

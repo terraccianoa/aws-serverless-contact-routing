@@ -24,35 +24,15 @@ AWS Services Used:
 - Amazon SNS
 - Amazon SQS
 - Amazon DynamoDB
-- AWS IAM
-- Amazon CloudWatch
 
-Client
-  |
-  v
-API Gateway
-  |
-  v
-Lambda Ingress
-  |
-  v
-SNS Topic
-  |
-  +----------------+
-  |                |
-  v                v
-SQS ITA      SQS FOREIGN
-  |                |
-  +-------+--------+
-          |
-          v
-     Lambda Worker
-          |
-          v
-      DynamoDB
-
-
----
+ARCH FLOW:
+- Client
+- API Gateway
+- Lambda Ingress
+- SNS Topic -->  SQS ITA  or  SQS FOREIGN
+- Lambda Worker
+- DynamoDB
+--
 
 ## Architecture
 

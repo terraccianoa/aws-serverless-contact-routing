@@ -2,11 +2,11 @@
 
 ## Overview
 
-This project demonstrates a simple event-driven serverless architecture on AWS.
+This project demonstrates a simple event-driven serverless architecture on AWS. The purpose of this repository is architectural and educational rather than production-oriented.
+
 
 The application exposes an API for collecting user contacts and routes requests through AWS messaging services before persisting data into DynamoDB.
-
-The purpose of this repository is architectural and educational rather than production-oriented.
+The ingress Lambda determines the country based on the phone prefix and publishes a message to SNS using message attributes. SNS subscription filter policies route messages to the appropriate queue.
 
 
 The system:
@@ -48,5 +48,14 @@ A client submits:
 {
   "name": "Mario Rossi",
   "phone": "+39333111222"
+}
+
+Stored record example:
+
+```json
+{
+  "phone": "+39333111222",
+  "name": "Mario Rossi",
+  "country": "IT"
 }
 

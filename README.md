@@ -18,6 +18,40 @@ The system:
 - Invokes a worker Lambda
 - Stores the contact in DynamoDB
 
+AWS Services Used:
+- Amazon API Gateway
+- AWS Lambda
+- Amazon SNS
+- Amazon SQS
+- Amazon DynamoDB
+- AWS IAM
+- Amazon CloudWatch
+
+Client
+  |
+  v
+API Gateway
+  |
+  v
+Lambda Ingress
+  |
+  v
+SNS Topic
+  |
+  +----------------+
+  |                |
+  v                v
+SQS ITA      SQS FOREIGN
+  |                |
+  +-------+--------+
+          |
+          v
+     Lambda Worker
+          |
+          v
+      DynamoDB
+
+
 ---
 
 ## Architecture

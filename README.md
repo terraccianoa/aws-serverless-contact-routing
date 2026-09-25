@@ -49,6 +49,7 @@ A client submits:
   "name": "Mario Rossi",
   "phone": "+39333111222"
 }
+```
 
 Stored record example:
 
@@ -58,4 +59,5 @@ Stored record example:
   "name": "Mario Rossi",
   "country": "IT"
 }
+```
 

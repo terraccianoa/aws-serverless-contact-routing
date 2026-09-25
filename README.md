@@ -25,3 +25,12 @@ A client submits:
   "name": "Mario Rossi",
   "phone": "+39333111222"
 }
+
+The system:
+
+Receives the request through API Gateway
+Invokes a Lambda function
+Publishes an event to SNS
+Routes the event to the appropriate SQS queue
+Invokes a worker Lambda
+Stores the contact in DynamoDB
